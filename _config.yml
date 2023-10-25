@@ -59,5 +59,8 @@ disqus:
 
 show_excerpts: true
 
+pagination: 
+  enabled: true
+
 paginate: 5
 paginate_path: "/blog/page:num/"
