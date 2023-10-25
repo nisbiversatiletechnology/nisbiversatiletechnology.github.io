@@ -54,3 +54,5 @@ plugins:
 
 disqus:
   shortname: nisbi-co-id
+
+show_excerpts: true
