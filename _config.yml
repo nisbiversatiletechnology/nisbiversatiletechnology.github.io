@@ -31,7 +31,6 @@ github_username:  nisbivertech
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-paginate
 
 
 # Exclude from processing.
@@ -59,8 +58,3 @@ disqus:
 
 show_excerpts: true
 
-pagination: 
-  enabled: true
-
-paginate: 5
-paginate_path: "/blog/page:num/"
