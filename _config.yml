@@ -18,16 +18,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Nisbi Versatile Technology
+email: email@nisbi.co.id
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Nisbi Versatile Technology adalah Laboratorium Teknologi Disruptif yang berkomitmen untuk menghadirkan perubahan besar dalam bagaimana dunia bekerja melalui teknologi canggih. Kami adalah pusat inovasi yang terus mendorong batas-batas teknologi untuk memberikan solusi yang benar-benar mengubah cara dunia beroperasi.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://nisbi.co.id" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: nisbivertech
+github_username:  nisbiversatiletechnology
 
 # Build settings
 theme: minima
