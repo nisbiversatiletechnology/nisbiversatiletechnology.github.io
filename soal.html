@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generator Soal Matematika</title>
+</head>
+<body>
+    <h1>Generator Soal Matematika</h1>
+    <button onclick="generateSoal()">Generate Soal</button>
+    <p id="soal"></p>
+    <ul id="pilihan-jawaban"></ul>
+    <p id="jawaban"></p>
+
+    <script>
+        function generateSoal() {
+            // Angka-angka acak untuk soal
+            var kecepatanRataRata = Math.floor(Math.random() * 10) + 1; // Kecepatan rata-rata dalam m/detik
+            var waktu = Math.floor(Math.random() * 61); // Waktu dalam menit, antara 0 dan 60
+
+            // Hitung jarak yang ditempuh
+            var jarak = kecepatanRataRata * (waktu * 60); // waktu dalam detik
+
+            // Buat soal
+            var soal = `Andi berjalan kaki dengan kecepatan rata-rata ${kecepatanRataRata} m/detik. Berapakah jarak yang ditempuh olehnya setelah ${waktu} menit berjalan?`;
+
+            // Jawaban benar
+            var jawaban = jarak;
+
+            // Jawaban salah (4 pilihan)
+            var jawabanSalah = [];
+            for (var i = 0; i < 4; i++) {
+                var angkaSalah = Math.floor(Math.random() * 101) * 10;
+                jawabanSalah.push(angkaSalah);
+            }
+
+            // Campur jawaban benar dan salah
+            var semuaJawaban = [jawaban].concat(jawabanSalah);
+            shuffleArray(semuaJawaban);
+
+            // Tampilkan soal
+            document.getElementById("soal").innerHTML = "Soal: " + soal;
+
+            // Tampilkan pilihan jawaban
+            var pilihanJawaban = document.getElementById("pilihan-jawaban");
+            pilihanJawaban.innerHTML = '';
+            for (var i = 0; i < semuaJawaban.length; i++) {
+                var listItem = document.createElement("li");
+                listItem.textContent = semuaJawaban[i] + " meter";
+                listItem.onclick = function() {
+                    if (semuaJawaban[i] === jawaban) {
+                        alert("Jawaban Benar!");
+                    } else {
+                        alert("Jawaban Salah.");
+                    }
+                };
+                pilihanJawaban.appendChild(listItem);
+            }
+
+            // Tampilkan jawaban yang benar
+            document.getElementById("jawaban").innerHTML = "Jawaban: " + jawaban + " meter";
+        }
+
+        // Fungsi untuk mengacak array
+        function shuffleArray(array) {
+            for (var i = array.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+    </script>
+</body>
+</html>

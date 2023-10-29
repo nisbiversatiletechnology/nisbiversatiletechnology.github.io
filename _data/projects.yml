@@ -1,0 +1,9 @@
+- title: Covid-19 Lung Sound Classifier
+  description: Proyek ini dapat menganalisa suara paru-paru yang dicek melalui stetoskop digital untuk menentukan fase Covid-19
+  url: /covidsound/
+- title: Media Bias Observer
+  description: Proyek ini dapat memberikan insight terhadap berita yang terindikasi sebagai bias
+  url: https://bias.observer
+- title: Distorsi Media Monitoring 
+  description: Proyek ini dapat memantau pemberitaan-pemberitaan media yang terindikasi melakukan praktik objektifikasi terhadap perempuan dalam pemberitaanya
+  url: https://distorsimediamonitoring.web.app
