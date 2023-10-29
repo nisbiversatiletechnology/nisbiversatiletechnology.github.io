@@ -2,7 +2,7 @@
 layout: post
 title: "Petualangan di Negeri Google"
 date: 2023-10-27
-author: ChatGPT 3.5
+author: GPT-3.5
 category: cerpen
 ---
 

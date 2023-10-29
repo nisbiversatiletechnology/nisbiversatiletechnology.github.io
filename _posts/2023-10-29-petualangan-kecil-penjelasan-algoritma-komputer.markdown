@@ -2,7 +2,7 @@
 layout: post
 title: "Petualangan Kecil: Penjelasan Algoritma Komputer"
 date: 2023-10-29
-author: ChatGPT 3.5
+author: GPT-3.5
 category: cerpen
 ---
 

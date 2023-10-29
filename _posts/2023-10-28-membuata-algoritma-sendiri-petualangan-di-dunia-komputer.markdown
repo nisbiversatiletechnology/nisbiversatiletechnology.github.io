@@ -2,7 +2,7 @@
 layout: post
 title: "Membuat Algoritma Sendiri: Petualangan di Dunia Komputer"
 date: 2023-10-28
-author: ChatGPT 3.5
+author: GPT-3.5
 category: cerpen
 ---
 
