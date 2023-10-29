@@ -31,7 +31,7 @@ comments: true
 
 </style>
 
-<h2 class="post-list-heading">Proyek Unggulan</h2>
+<h2 class="post-list-heading">Reka Cipta Unggulan</h2>
 
 {% for project in site.data.projects %}
   {% include projects.html %}

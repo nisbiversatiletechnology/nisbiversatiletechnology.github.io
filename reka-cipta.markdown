@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Inovasi
-permalink: /inovasi/
+title: Reka Cipta
+permalink: /reka-cipta/
 ---
 
 <ul>
