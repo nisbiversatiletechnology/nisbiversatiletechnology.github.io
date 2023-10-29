@@ -3,6 +3,7 @@ layout: post
 title: "Petualangan Kecil: Penjelasan Algoritma Komputer"
 date: 2023-10-29
 author: ChatGPT 3.5
+category: cerpen
 ---
 
 Pada suatu waktu, di sebuah desa yang tenang, hidup seorang anak laki-laki yang penuh rasa penasaran yang bernama Ali. Ali selalu penasaran tentang cara komputer bisa melakukan hal-hal yang begitu menakjubkan. Suatu hari, Ali bertemu dengan seorang kakek bijak yang akan mengajarinya tentang algoritma komputer.
