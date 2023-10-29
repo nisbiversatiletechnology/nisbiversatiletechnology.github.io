@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  
+  <!-- HTML Meta Tags -->
+  <title>Media Bias Observer: 5 Signs You Have a Media Trust Issue</title>
+  <meta name="description" content="If you have at least one of the Media Trust Issue signs, you should install Media Bias Observer Browser. It's an OpenAI-powered media literacy tool.">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://www.bias.observer">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Media Bias Observer: 5 Signs You Have a Media Trust Issue">
+  <meta property="og:description" content="If you have at least one of the Media Trust Issue signs, you should install Media Bias Observer Browser. It's an OpenAI-powered media literacy tool.">
+  <meta property="og:image" content="https://www.bias.observer/og-image-www.bias.observer.png">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="bias.observer">
+  <meta property="twitter:url" content="https://www.bias.observer">
+  <meta name="twitter:title" content="Media Bias Observer: 5 Signs You Have a Media Trust Issue">
+  <meta name="twitter:description" content="If you have at least one of the Media Trust Issue signs, you should install Media Bias Observer Browser. It's an OpenAI-powered media literacy tool.">
+  <meta name="twitter:image" content="https://www.bias.observer/og-image-www.bias.observer.png">
+
+  <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+        
+        
+<link rel="icon" type="image/png" href="favicon.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+
+.bottom-clip{
+	clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
+	min-height: 200px;
+
+}
+
+.top-clip{
+	clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+	min-height: 200px;
+	
+}
+
+.top-clip-2{
+	clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);
+	min-height: 200px;
+}
+
+.bottom-clip-2{
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+	min-height: 200px;
+}
+
+.p-10{
+	margin-top: 100px;
+}
+
+footer{
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 85px;
+
+
+}
+
+.imgminus{
+  position: relative;
+  top: -130px;
+  max-width: 100%;
+  max-height: 100%;
+}
+</style>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+      google.charts.load('current', {'packages':['gauge']});
+      google.charts.setOnLoadCallback(drawChart);
+      let level;
+      function drawChart(level) {
+
+        if(level==="red"){
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Trust Issue', 100]
+        ]);
+      }else{
+      	var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Trust Issue', 0]
+        ]);
+      }
+
+        var options = {
+          width: 200, height: 200,
+          redFrom: 90, redTo: 100,
+          yellowFrom:75, yellowTo: 90,
+          minorTicks: 5
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+
+       
+    
+    if(level==="red"){
+         setInterval(function() {
+      	data.setValue(0, 1, 90 + Math.round(10 * Math.random()));
+          chart.draw(data, options);
+}, 1000);
+      }else{
+      	 setInterval(function() {
+          data.setValue(0, 1, 10 + Math.round(20 * Math.random()));
+          chart.draw(data, options);
+        }, 1000);
+      }
+
+
+      }
+
+
+      
+    </script>
+
+
+</head>
+<body class="bg-light border-0">
+
+
+<main>
+
+<!--Lead-->
+<div class="container mt-5">
+	<div class="row">
+<div class="col-sm-12 text-center">
+<p class="h5">Have you read tons of news every day but not found any enlightenment?</p>
+<h1 class="h1">5 Signs You Have a <span class="text-danger">Media Trust Issue</span></h1>
+<h5 class="h5">The more that you read, the less clear it becomes</h5>
+</div>
+</div>
+</div>
+
+
+
+<!--video-->
+
+<div class="container mt-5 ">
+<div class="row">
+<div class="col-sm-8 mb-3">
+
+
+<img src="People watching the news-amico.svg" />
+
+
+</div>
+
+<div class="col-sm-4 card">
+	<center><div id="chart_div" style="width: 200px; height: 200px;"></div></center>
+<h5>Media trust issue self-diagnosis tool:</h5>
+<ul class="list-group mb-3">
+<li class="list-group-item">
+	<input type="checkbox" name="forexiety1" value="low"  onclick="drawChart('red')"> Read the news but hesitate to believe it
+</li><br/>
+<li class="list-group-item">
+	<input type="checkbox" name="forexiety1" value="low" onclick="drawChart('red')"> Have a suspicion that news is made to lead readers
+</li><br/>
+<li class="list-group-item">
+	<input type="checkbox" name="forexiety1" value="low" onclick="drawChart('red')"> Often skeptical about the choice of words used in the news
+</li><br/>
+<li class="list-group-item">
+	<input type="checkbox" name="forexiety1" value="low" onclick="drawChart('red')"> Worry about the people around you who are reactive to the news
+</li><br/>
+<li class="list-group-item">
+	<input type="checkbox" name="forexiety1" value="low" onclick="drawChart('red')"> Worry about the people around you who overtrust in the news
+</li>
+</ul>
+*Check those if any suit you, and see how bad it gets
+</div>
+
+<div class="col-sm-12 text-center mt-3">
+	<p class="h3">If your <span class="text-danger">Media Trust Issue level exceeds the threshold</span>, <br/> you may need a <span class="text-success">Media Bias Observer Browser</span></p>
+	<a href="https://chrome.google.com/webstore/detail/media-bias-observer/aogbiacfpfbecenlgcofmhochhamcbbb" target="_blank" ><button type="button" class="btn btn-success btn-lg mt-3"><span class="h2">Add to Chrome</span></button></a> <a href="https://play.google.com/store/apps/details?id=com.nisbi.mediabiasobserver" target="_blank"><button type="button" class="btn btn-success btn-lg mt-3"><span class="h2">Install to Android</span></button></a>
+	<p>Free browser with built-in media bias possibility insight<p>
+	
+</div>
+
+
+</div>
+</div>
+
+
+
+<div class="bg-success bottom-clip mt-5 border-0" >
+
+</div>
+
+
+<!--how-->
+<div id="how" class="bg-success border-0 ">
+	<div class="container border-0">
+<div class="row border-0 text-center text-white " style="margin-top:-1px;">
+	<div class="col-sm-12">
+  <p class="h2">Take down the media bias in <span class="text-warning">just 3 steps</span></p>
+	</div>
+	<div class="col-sm-4">
+	<img src="App installation-cuate.svg"/>
+	<p class="h5 text-warning">STEP ONE</p>
+	<p><b>Install Media Bias Observer Browser</b></p>
+	<p>Install Media Bias Observer Browser in your favorite daily devices</p>
+
+</div>
+	<div class="col-sm-4">
+		<img src="Typing-bro.svg"/>
+	<p class="h5 text-warning">STEP TWO</p>
+	<p><b>Browse News as Usual</b></p>
+	<p>Browse and read news as usual via Media Bias Observer Browser</p>
+
+</div>
+	<div class="col-sm-4">
+		<img src="Click here-pana.svg"/>
+	<p class="h5 text-warning">STEP THREE</p>
+	<p><b>Click Insight Button</b></p>
+	<p>Click on the Media Bias Observer button to get media bias possibility insight while you read news</p>
+
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="bg-success top-clip border-0" style="margin-top:-1px;">
+
+</div>
+
+
+
+<div class="container">
+<div class="row text-center">
+	<div class="col-sm-12 text-center m-5"><h3>Let's <span class="text-success">Media Bias Observer Browser</span> Assists Your Media Literacy</h3>
+<p>Don't let biased news drag you down without a fight</p>
+
+</div>
+<div class="col-sm-12 text-center">
+<!--<img src="Website Launch Countdown Instagram Post.png" width="75%"/>-->
+
+</div>
+	
+</div>
+</div>
+
+
+
+
+<div class=" bg-success top-clip-2 mt-5 border-0" >
+
+</div>
+
+<!--how-->
+<div id="how" class="bg-success border-0 ">
+	<div class="container border-0">
+<div class="row border-0 text-center text-white " style="margin-top:-1px;">
+	<div class="col-sm-12 mb-3">
+  <p class="h2"><span class="text-warning">About Media Bias Observer Browser, Term Of Use, and Privacy Policy</span></p>
+	</div>
+	<div class="col-sm-8">
+<img src="Progresive app-cuate.svg" class="w-100">
+</div>
+	<div class="col-sm-4">
+
+<p class="text-left" id="about">What is Media Bias Observer:
+<ul>
+<li class="text-left">OpenAI-powered assist tools for media literacy</li>
+<li class="text-left">Built-in browser with media bias possibility insight</li>
+	</ul>
+	</p>
+
+	<p class="text-left" id="termofuse">Term of Use:
+<ul>
+<li class="text-left">This is a research review version, OpenAI may occasionally generate incorrect information, so use it with your responsibility</li>
+	</ul>
+	</p>
+
+	<p class="text-left" id="privacypolicy">Privacy Policy:
+<ul>
+<li class="text-left">We don't save your browsing behaviour</li>
+	</ul>
+	</p>
+
+		<p class="text-left" id="disclaimer">Disclaimer:
+<ul>
+<li class="text-left">OpenAI may occasionally generate incorrect information</li>
+<li class="text-left">Research review version</li>
+<li class="text-left">This may contain third-party ads</li>
+</ul>
+	</p>
+
+
+</div>
+
+
+
+
+</div>
+</div>
+</div>
+
+<div class=" bg-success bottom-clip-2 border-0" style="margin-top:-1px;">
+
+</div>
+
+
+
+
+<div class="container text-center">
+	<div class="row">
+		<div class="col-sm-12">
+		<p class="h3">Get <span class="text-success">Media Bias Observer Browser</span> instant access, and install now!</p>
+	<!--<p class="h3">Special Price <strike class="text-danger">$99</strike></p>-->
+
+  </div>
+
+  <div class="col-sm-12 text-center">
+	<!--<p class="h1 text-success" >100% FREE</p>-->
+  </div>
+
+<div class="col-sm-12 text-center" >
+<a href="https://chrome.google.com/webstore/detail/media-bias-observer/aogbiacfpfbecenlgcofmhochhamcbbb" target="_blank"><button type="button" class="btn btn-success btn-lg mt-3"><span class="h2">Add to Chrome</span></button></a> <a href="https://play.google.com/store/apps/details?id=com.nisbi.mediabiasobserver" target="_blank"><button type="button" class="btn btn-success btn-lg mt-3"><span class="h2">Install to Android</span></button></a>
+</div>
+
+</div>
+</div>
+
+
+</main>
+
+
+
+
+<div class="mb-5 mt-5">
+	
+	<div class="container">
+<div class="row text-center mb-5">
+<div class="col-sm-12">
+    <small>
+    <a href="https://commons.wikimedia.org/wiki/File:Richard_Caton_Woodville,_%22War_News_from_Mexico%22_2010_74v1.jpg">Richard Caton Woodville, Sr.</a>, CC0, via Wikimedia Commons
+<a href="https://storyset.com/people">People illustrations by Storyset</a>
+
+<a href="https://storyset.com/user">User illustrations by Storyset</a>
+
+<a href="https://storyset.com/online">Online illustrations by Storyset</a>
+
+<a href="https://storyset.com/technology">Technology illustrations by Storyset</a>
+
+<a href="https://storyset.com/business">Business illustrations by Storyset</a>
+</small>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--footer-->
+<footer class="bg-light border-top border-success " style="z-index:100;">
+<div class="row  mx-auto mt-3" style="max-width:960px;">
+
+<div class="col-sm-4 d-none d-sm-block">
+<img  src="discount.svg" class="imgminus "/>
+<!-- <span >Airdrop <b>80% OFF</b></span> -->
+</div>
+
+<div class="col-sm-4 text-center d-none d-sm-block">
+<span ><i class="i-bonus"><b>Jackpot!</b></i> <b>100% FREE</b><br/><i> Get "<span class="text-success">Media Bias Observer Browser</span>" </i></span>
+</div>
+
+<div class="col-sm-4 d-none d-sm-block">
+<a href="https://chrome.google.com/webstore/detail/media-bias-observer/aogbiacfpfbecenlgcofmhochhamcbbb" target="_blank"><button type="button" class="btn btn-success btn-lg"><span class="h3">Chrome</span></button></a>
+
+<a href="https://play.google.com/store/apps/details?id=com.nisbi.mediabiasobserver" target="_blank"><button type="button" class="btn btn-success btn-lg"><span class="h3">Android</span></button></a>
+</div>
+
+
+
+	<div class="col-sm-12 .d-block .d-sm-none text-center">
+		<span ><i> Get "<span class="text-success">Media Bias Observer Browser</span>"</i></span>
+    <br/>
+<a href="https://chrome.google.com/webstore/detail/media-bias-observer/aogbiacfpfbecenlgcofmhochhamcbbb" target="_blank"><button type="button" class="btn btn-success btn-xs"><span class="h5">Add to Chrome</span></button></a>
+
+<a href="https://play.google.com/store/apps/details?id=com.nisbi.mediabiasobserver" target="_blank"><button type="button" class="btn btn-success btn-xs"><span class="h5">Install to Android</span></button></a>
+		
+	</div>
+
+</div>
+</footer>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
