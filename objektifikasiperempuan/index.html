@@ -1,0 +1,663 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Distorsi Media Monitoring (Versi Alpha) - Prediksi (prakiraan) Objektifikasi Perempuan di Media</title>
+
+    <!-- Styles -->
+<style>
+#barracechartdiv {
+  width: 100%;
+  height: 1000px;
+}
+
+#wordcloudchartdiv {
+  width: 100%;
+  height: 500px;
+}
+
+</style>
+  </head>
+  <body class="p-3">
+
+
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/wc.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+
+<!-- Chart code -->
+<script>
+
+
+const muatawal = (wordchart, start, end) => {
+
+fetch(`https://wba4ciroxwnsontuyxocttrt5q0vkpgm.lambda-url.ap-southeast-3.on.aws/?mulai=${start}&hingga=${end}`).then(
+        response => response.json()
+        ).then(responseJson => {
+
+          responseJson.Items.sort(function(a, b) {
+    return a.prediksiskor - b.prediksiskor;
+});
+
+      
+
+let textkiriman = " ";
+
+for(let k in responseJson.Items){
+
+  let card = document.createElement('div');
+  card.innerHTML = `<div class="card mt-3">
+  <div class="card-header">
+    ${responseJson.Items[k].media}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">${responseJson.Items[k].judul}</h5>
+    <p class="card-text">Skor prediksi objektifikasi perempuan ${responseJson.Items[k].prediksiskor}</p>
+    <a href="${responseJson.Items[k].newsurl}" class="btn btn-primary mt-1" target="_blank">Lihat Detail</a> <a href="https://dewanpers.or.id/datapengaduan/form" class="btn btn-danger mt-1" target="_blank">Adukan Dewan Pers</a>  <a href="https://docs.google.com/forms/d/e/1FAIpQLScmLUXyNGYr02Jr6KXM2USz-kuwHg35kiQvJ3R5tG8tDM_gMw/viewform?usp=pp_url&entry.146225392=${responseJson.Items[k].newsurl}&entry.250290472=${responseJson.Items[k].judul}" class="mt-1 btn btn-warning" target="_blank">Tandai Bukan Objektifikasi</a>
+  </div>
+</div>`;
+  document.getElementById("pelaporan").appendChild(card);
+  textkiriman = textkiriman + responseJson.Items[k].judul;
+}
+
+
+
+
+
+
+
+if(wordchart==true){
+    wordstart(textkiriman);
+}
+barstart(responseJson);
+
+
+
+
+
+        });
+      }
+
+</script>
+
+
+<script>
+
+const barstart = (responseJson) => {
+
+  let bardaftarmedia = [];
+  let bardata = [];
+
+  for(let i=0;i<responseJson.Items.length; i++){
+           	bardaftarmedia.push(responseJson.Items[i].media);
+  }
+
+  bardaftarmedia = [...new Set(bardaftarmedia)];
+
+  for(let i=0; i<bardaftarmedia.length;i++){
+            let jumlahberita = responseJson.Items.filter(dataset => dataset['media']==bardaftarmedia[i]).length;
+            bardata.push(JSON.parse(`{"media":"${bardaftarmedia[i]}","value":${jumlahberita}}`));
+  }
+
+  //console.log(bardata);
+ 
+ 
+
+
+const renderbarchart = (bardata) => {
+
+  am5.ready(function() {
+
+// Create root element
+// https://www.amcharts.com/docs/v5/getting-started/#Root_element
+var root = am5.Root.new("barracechartdiv");
+
+
+// Set themes
+// https://www.amcharts.com/docs/v5/concepts/themes/
+//root.setThemes([
+//  am5themes_Animated.new(root)
+//]);
+
+
+// Create chart
+// https://www.amcharts.com/docs/v5/charts/xy-chart/
+var chart = root.container.children.push(am5xy.XYChart.new(root, {
+  panX: false,
+  panY: false,
+  wheelX: "none",
+  wheelY: "none"
+}));
+
+// We don't want zoom-out button to appear while animating, so we hide it
+chart.zoomOutButton.set("forceHidden", true);
+
+
+// Create axes
+// https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+var yRenderer = am5xy.AxisRendererY.new(root, {
+  minGridDistance: 5
+});
+
+var yAxis = chart.yAxes.push(am5xy.CategoryAxis.new(root, {
+  maxDeviation: 0,
+  categoryField: "media",
+  renderer: yRenderer,
+  tooltip: am5.Tooltip.new(root, { themeTags: ["axis"] })
+}));
+
+var xAxis = chart.xAxes.push(am5xy.ValueAxis.new(root, {
+  maxDeviation: 0,
+  min: 0,
+  extraMax:0.1,
+  renderer: am5xy.AxisRendererX.new(root, {})
+}));
+
+
+// Add series
+// https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+  name: "Series 1",
+  xAxis: xAxis,
+  yAxis: yAxis,
+  valueXField: "value",
+  categoryYField: "media",
+  tooltip: am5.Tooltip.new(root, {
+    pointerOrientation: "left",
+    labelText: "{valueX}"
+  })
+}));
+
+
+// Rounded corners for columns
+series.columns.template.setAll({
+  cornerRadiusTR: 5,
+  cornerRadiusBR: 5
+});
+
+// Make each column to be of a different color
+series.columns.template.adapters.add("fill", function(fill, target) {
+  return chart.get("colors").getIndex(series.columns.indexOf(target));
+});
+
+series.columns.template.adapters.add("stroke", function(stroke, target) {
+  return chart.get("colors").getIndex(series.columns.indexOf(target));
+});
+
+
+// Set data
+var data = bardata;
+
+yAxis.data.setAll(data);
+series.data.setAll(data);
+sortCategoryAxis();
+
+// Get series item by category
+function getSeriesItem(category) {
+  for (var i = 0; i < series.dataItems.length; i++) {
+    var dataItem = series.dataItems[i];
+    if (dataItem.get("categoryY") == category) {
+      return dataItem;
+    }
+  }
+}
+
+chart.set("cursor", am5xy.XYCursor.new(root, {
+  behavior: "none",
+  xAxis: xAxis,
+  yAxis: yAxis
+}));
+
+
+// Axis sorting
+function sortCategoryAxis() {
+
+  // Sort by value
+  series.dataItems.sort(function(x, y) {
+    return x.get("valueX") - y.get("valueX"); // descending
+    //return y.get("valueY") - x.get("valueX"); // ascending
+  })
+
+  // Go through each axis item
+  am5.array.each(yAxis.dataItems, function(dataItem) {
+    // get corresponding series item
+    var seriesDataItem = getSeriesItem(dataItem.get("category"));
+
+    if (seriesDataItem) {
+      // get index of series data item
+      var index = series.dataItems.indexOf(seriesDataItem);
+      // calculate delta position
+      var deltaPosition = (index - dataItem.get("index", 0)) / series.dataItems.length;
+      // set index to be the same as series data item index
+      dataItem.set("index", index);
+      // set deltaPosition instanlty
+      dataItem.set("deltaPosition", -deltaPosition);
+      // animate delta position to 0
+      dataItem.animate({
+        key: "deltaPosition",
+        to: 0,
+        duration: 1000,
+        easing: am5.ease.out(am5.ease.cubic)
+      })
+    }
+  });
+
+  // Sort axis items by index.
+  // This changes the order instantly, but as deltaPosition is set,
+  // they keep in the same places and then animate to true positions.
+  yAxis.dataItems.sort(function(x, y) {
+    return x.get("index") - y.get("index");
+  });
+}
+
+
+// update data with random values each 1.5 sec
+//setInterval(function () {
+//  updateData();
+//}, 1500)
+
+function updateData() {
+  am5.array.each(series.dataItems, function (dataItem) {
+    var value = dataItem.get("valueX") + Math.round(Math.random() * 1000000000 - 500000000);
+    if (value < 0) {
+      value = 500000000;
+    }
+    // both valueY and workingValueY should be changed, we only animate workingValueY
+    dataItem.set("valueX", value);
+    dataItem.animate({
+      key: "valueXWorking",
+      to: value,
+      duration: 600,
+      easing: am5.ease.out(am5.ease.cubic)
+    });
+  })
+
+  sortCategoryAxis();
+}
+
+
+// Make stuff animate on load
+// https://www.amcharts.com/docs/v5/concepts/animations/
+series.appear(1000);
+chart.appear(1000, 100);
+
+}); // end am5.ready()
+
+}
+
+setTimeout(function(){
+             renderbarchart(bardata)
+
+},2000);
+
+}
+
+const wordstart = (textkirimanya) => {
+am5.ready(function() {
+
+// Create root element
+// https://www.amcharts.com/docs/v5/getting-started/#Root_element
+var root = am5.Root.new("wordcloudchartdiv");
+
+
+// Set themes
+// https://www.amcharts.com/docs/v5/concepts/themes/
+//root.setThemes([
+//  am5themes_Animated.new(root)
+//]);
+
+
+// Add series
+// https://www.amcharts.com/docs/v5/charts/word-cloud/
+var series = root.container.children.push(am5wc.WordCloud.new(root, {
+  maxCount:100,
+  minWordLength:2,
+  maxFontSize:am5.percent(35),
+  text: textkirimanya,
+}));
+
+
+// Configure labels
+series.labels.template.setAll({
+  paddingTop: 5,
+  paddingBottom: 5,
+  paddingLeft: 5,
+  paddingRight: 5,
+  fontFamily: "Courier New"
+});
+
+}); // end am5.ready()
+
+}
+
+</script>
+
+
+
+
+
+
+    <h1>Distorsi Media Monitoring (Versi Alpha)</h1>
+    <div class="border-bottom mt-3"></div>
+
+    <div class="row">
+<div class="col-sm-3 p-3 border-end ">
+  
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Sumber Data
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <label><input type="checkbox" disabled checked value>Hasil pencarian Google</label><br/>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Tanggal
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+<input type="week" id="myWeek" min="2022-W22" required>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="d-grid mt-3 gap-2">
+  <button class="btn btn-primary" type="button" data-bs-toggle="tooltip" data-bs-placement="top" onclick="muatulang()" >Terapkan Filter</button>
+</div>
+
+<div class="border-bottom mt-3"></div>
+
+</div>
+<div class="col-sm-9 ">
+  
+<h3 id="judul" class="mt-3"></h3>
+
+
+  <ul class="nav nav-pills navbar-light bg-light mt-3">
+  <li class="nav-item">
+    <a class="nav-link btn"  href="#" aria-current="page" onclick="sebaran()">Sebaran Media</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link btn"  href="#" onclick="pedoman()">Draft Usulan Pedoman Pemberitaan Ramah Perempuan</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link btn"  href="#" onclick="pendanaan()">Alternatif Pendanaan Media</a>
+  </li>
+    
+  <li class="nav-item">
+    <a class="nav-link btn"  href="#" onclick="whitepaper()"><i>White Paper</i> Distorsi</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn"  href="#" onclick="umpanbalik()">Umpan Balik</a>
+  </li>  
+  
+</ul>
+
+  <div id="barracechartdiv"></div>
+  <div id="wordcloudchartdiv"></div>
+  <div id="pelaporan"></div>
+
+  <div id="pedoman">
+    <p class="mt-3 h3">Draft Usulan Pedoman Pemberitaan Ramah Perempuan</p>
+    <p>1. Wartawan tidak memberikan atribusi yang tidak relevan terkait pemberitaan perempuan.</p>
+    <p>2. Wartawan tidak ...</p>
+    <p>3. Wartawan tidak ...</p>
+  </div>
+
+  <div id="pendanaan">
+  <p class="mt-3">Alternatif pendanaan media</p>
+
+<blockquote class="twitter-tweet"><p lang="in" dir="ltr">MINGGU TERAKHIR! 🚨 Dana peliputan sampai US$10,000.<br><br>Dana Hibah Jurnalisme Hutan Hujan (RJF) membuka panggilan khusus proposal di tiga wilayah:<br><br>🟩 Amazon: <a href="https://t.co/B3j1IEOPUB">https://t.co/B3j1IEOPUB</a><br>🟩 Basin Kongo: <a href="https://t.co/8WTp3uPpfS">https://t.co/8WTp3uPpfS</a><br>🟩 Asia Tenggara: <a href="https://t.co/aiwghVng17">https://t.co/aiwghVng17</a></p>&mdash; Rainforest Journalism Fund (RJF) (@Rainforest_RJF) <a href="https://twitter.com/Rainforest_RJF/status/1519330360982740993?ref_src=twsrc%5Etfw">April 27, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<blockquote class="twitter-tweet"><p lang="in" dir="ltr">Yang belum daftar, yuk bungkus!<br><br>S I S J - E J N F E L L O W S H I P<br>Meliput Biodiversitas Non-ikonik Indonesia <br>2022 <a href="https://t.co/cd2JDy3y59">pic.twitter.com/cd2JDy3y59</a></p>&mdash; Society of Indonesian Science Journalists (SISJ) (@jurnalisains) <a href="https://twitter.com/jurnalisains/status/1501512185662476292?ref_src=twsrc%5Etfw">March 9, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+  </div>
+
+  <div id="umpanbalik"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLScIIbkd70Dggz51n5AhVJhwoJvhL7UzGhke4S82iHheMiLFKQ/viewform?embedded=true" width="100%" height="939" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">Loading…</iframe></div>
+  <div id="whitepaper">
+    <h3 class="mt-3">Masa depan Distorsi Media Monitoring bergantung pada dukungan anda!</h3>
+
+    <ul>
+      <li><b>Riset Peningkatan Akurasi Prediksi Objektifikasi</b> Kami ingin melakukan riset untuk peningkatan akurasi prediksi objektifikasi</li>
+    <ul>
+
+
+
+  </div>
+
+</div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+
+
+        <script>
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
+
+
+
+
+
+
+const queryString = window.location.search;
+
+const urlParams = new URLSearchParams(queryString);
+
+let week = urlParams.get('week');
+
+ currentdate = new Date();
+  var oneJan = new Date(currentdate.getFullYear(),0,1);
+  var numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
+  var result = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7);
+
+if(week==null){
+ 
+
+
+  document.getElementById("myWeek").defaultValue = `2023-W20`;
+  week= document.getElementById("myWeek").value;
+  document.getElementById("myWeek").setAttribute('max', `2023-W20`);
+
+
+
+}else{
+  document.getElementById("myWeek").defaultValue = week;
+  document.getElementById("myWeek").setAttribute('max', `2023-W20`);
+}
+
+
+
+
+function getDateFromWeekNumber(year, weekNumber) {
+  const date = new Date(year, 0, 1);
+  const daysToAdd = (weekNumber - 1) * 7;
+  date.setDate(date.getDate() - date.getDay() + 1 + daysToAdd);
+  return date;
+}
+
+
+
+const getstartdate = () => {
+
+  let filterminggu = document.getElementById("myWeek").value;
+let y = Number(filterminggu.split('-')[0]);
+let w = filterminggu.split('-')[1];
+w = Number(w.replace("W",""));
+
+//const startDays = (w) * 7 - ((new Date(y,0,1)).getDay());
+//const startDay = new Date(y, 0, startDays);
+const startDay = getDateFromWeekNumber(y, w);
+
+//const endDays = 8 + (w) * 7 - (new Date(y,0,1)).getDay();
+//const endDay = new Date(y, 0, endDays);
+const endDay = new Date(startDay.getTime() + (6 * 24 * 60 * 60 * 1000));
+
+
+document.getElementById("judul").innerHTML = `Prediksi (prakiraan) Objektifikasi Perempuan di Media \n <p class="h6"> ${startDay} hingga ${endDay} </p>`;
+
+
+return Number(startDay.valueOf()/1000);
+
+
+}
+
+
+const getenddate = () => {
+
+    let filterminggu = document.getElementById("myWeek").value;
+let y = Number(filterminggu.split('-')[0]);
+let w = filterminggu.split('-')[1];
+w = Number(w.replace("W",""));
+
+//const startDays = (w) * 7 - ((new Date(y,0,1)).getDay()-1);
+//const startDay = new Date(y, 0, startDays);
+const startDay = getDateFromWeekNumber(y, w);
+console.log(w);
+
+//const endDays = 8 + (w) * 7 - (new Date(y,0,1)).getDay();
+const endDay = new Date(startDay.getTime() + (6 * 24 * 60 * 60 * 1000));
+
+
+document.getElementById("judul").innerHTML = `Prediksi (prakiraan) Objektifikasi Perempuan di Media \n <p class="h6"> ${startDay} hingga ${endDay} </p>`;
+
+
+return Number(endDay.valueOf()/1000);
+
+  
+}
+
+
+
+
+
+
+
+
+
+setTimeout(function(){
+
+  document.getElementById("barracechartdiv").style.display = 'block';
+  document.getElementById("wordcloudchartdiv").style.display = 'block';
+  document.getElementById("pelaporan").style.display = 'block';
+  document.getElementById("umpanbalik").style.display = 'none';
+  document.getElementById("whitepaper").style.display = 'none';
+  document.getElementById("pedoman").style.display = 'none';
+  document.getElementById("pendanaan").style.display = 'none';
+
+},1000)
+
+const sebaran = () => {
+  document.getElementById("barracechartdiv").style.display = 'block';
+  document.getElementById("wordcloudchartdiv").style.display = 'block';
+  document.getElementById("pelaporan").style.display = 'block';
+  document.getElementById("umpanbalik").style.display = 'none';
+  document.getElementById("whitepaper").style.display = 'none';
+  document.getElementById("pedoman").style.display = 'none';
+  document.getElementById("pendanaan").style.display = 'none';
+
+}
+
+
+const pedoman = () => {
+  document.getElementById("barracechartdiv").style.display = 'none';
+  document.getElementById("wordcloudchartdiv").style.display = 'none';
+  document.getElementById("pelaporan").style.display = 'none';
+  document.getElementById("umpanbalik").style.display = 'none';
+  document.getElementById("whitepaper").style.display = 'none';
+  document.getElementById("pedoman").style.display = 'block';
+  document.getElementById("pendanaan").style.display = 'none';
+
+}
+
+const pendanaan = () =>{
+  document.getElementById("barracechartdiv").style.display = 'none';
+  document.getElementById("wordcloudchartdiv").style.display = ' none';
+  document.getElementById("pelaporan").style.display = 'none';
+  document.getElementById("umpanbalik").style.display = 'none';
+  document.getElementById("whitepaper").style.display = 'none';
+  document.getElementById("pedoman").style.display = 'none';
+  document.getElementById("pendanaan").style.display = 'block';
+
+}
+
+
+const umpanbalik = () => {
+  document.getElementById("barracechartdiv").style.display = 'none';
+  document.getElementById("wordcloudchartdiv").style.display = 'none';
+  document.getElementById("umpanbalik").style.display = 'block';
+  document.getElementById("pelaporan").style.display = 'none';
+  document.getElementById("whitepaper").style.display = 'none';
+   document.getElementById("pedoman").style.display = 'none';
+  document.getElementById("pendanaan").style.display = 'none';
+
+}
+
+const whitepaper = () => {
+  document.getElementById("barracechartdiv").style.display = 'none';
+  document.getElementById("wordcloudchartdiv").style.display = 'none';
+  document.getElementById("umpanbalik").style.display = 'none';
+  document.getElementById("pelaporan").style.display = 'none';
+  document.getElementById("whitepaper").style.display = 'block';
+   document.getElementById("pedoman").style.display = 'none';
+  document.getElementById("pendanaan").style.display = 'none';
+
+}
+
+const muatulang = () => {
+  let newurl=  "?week=" + document.getElementById("myWeek").value;
+  window.location.href = newurl; 
+  
+
+  
+}
+muatawal(true, getstartdate(), getenddate());
+
+    </script>
+    
+  </body>
+</html>
