@@ -1,0 +1,368 @@
+{
+  "data": [
+    {
+      "id_soal": 0,
+      "jenis": "Aljabar",
+      "soal": "Jarak ke kota A dari kota B adalah 100 Km. Budi berangkat dari kota B sejak pukul 08.00 WIB dengan kecepatan 50 Km/Jam. Karena terdapat 2 lampu merah sepanjang perjalanan, Budi berhenti selama 5 menit di tiap lampu merahnya. Jam berapa Budi sampai?",
+      "jawaban": [
+        "11:10 WIT",
+        "10:10 WIT",
+        "10:05 WIT",
+        "11:05 WIT",
+        "10:00 WIT"
+      ],
+      "pembahasan": "Waktu yang ditempuh untuk 100 Km dengan kecepatan 50Km/jam adalah 2 jam. Jika berangkat pukul 08.00 WIB akan sampai pukul 10.00 WIB. Ditambahkan 10 menit durasi berhenti di lampu merah, jadi sampai di tujuan pukul 10.10 WIB. Namun pilihan jawaban hanya dalam WIT yang selisih 1 jam lebih cepat dari WIB."
+    },
+    {
+      "id_soal": 1,
+      "jenis": "Deret bilangan",
+      "soal": "1, 3, 10, 6, 20, ..., ... ",
+      "jawaban": [
+        "9 dan 30",
+        "12 dan 40",
+        "23 dan 30",
+        "9 dan 23",
+        "20 dan 30"
+      ],
+      "pembahasan": "Bilangan ganjil ditambah 3, bilangan genap ditambah 10."
+    },
+    {
+      "id_soal": 2,
+      "jenis": "Padanan hubungan kata",
+      "soal": "JAMBU : MONYET",
+      "jawaban": [
+        "Mangga : Manalagi",
+        "Ketimun : Kancil",
+        "Pisang : Monyet",
+        "Wortel : Kelinci",
+        "Kacang : Tupai"
+      ],
+      "pembahasan": "Hubungan kedua kata tersebut adalah Objek dan Jenis "
+    },
+    {
+      "id_soal": 3,
+      "jenis": "Antonim (Lawan kata)",
+      "soal": "KABUR >< ... ",
+      "jawaban": [
+        "Mencolok",
+        "Keruh",
+        "Lari",
+        "Blur",
+        "Buram"
+      ],
+      "pembahasan": "Arti Kabur di KBBI adalah 'Tidak dapat melihat sesuatu dengan jelas (tentang mata)' "
+    },
+    {
+      "id_soal": 4,
+      "jenis": "Sinonim (Perasamaan kata)",
+      "soal": "NISBI = ... ",
+      "jawaban": [
+        "Hanya terlihat (pasti; terukur) jika dibandingkan dengan yang lain",
+        "Tidak enak didengar",
+        "Rangkaian kejadian (pemandangan dan sebagainya)",
+        "Usaha komersial dalam dunia perdagangan",
+        "Diulang atau ditambah lagi (dalam nyanyian dan sebagainya)"
+      ],
+      "pembahasan": "Contoh penggunaan kata 'nisbi' di KBBI, 'Cantik itu nisbi, bergantung kepada yang melihat'. "
+    },
+    {
+      "id_soal": 5,
+      "jenis": "Padanan hubungan kata",
+      "soal": "PUISI : RIMA",
+      "jawaban": [
+        "Lagu : Nada",
+        "Lagu : Gitar",
+        "Lagu : Merdu",
+        "Membaca : Tulisan",
+        "Melihat : Pemandangan"
+      ],
+      "pembahasan": "Hubungan kedua kata tersebut adalah Objek dan Elemen Objek'. "
+    },
+    {
+      "id_soal": 6,
+      "jenis": "Fakta",
+      "soal": "Setiap awal bulan, Budi menabung sejumlah Rp 50.000,- dalam waktu 3 tahun di Bank X. Kemudian teman Budi, membeli lembar saham Bank X senilai Rp 50.000,- setiap awal bulan selama 3 tahun. Setelah 3 tahun, teman Budi menerima deviden yang diberikan karena kepemilikan saham total sejumlah Rp 50.000,-. Nilai saham yang dimiliki teman Budi setelah 3 tahun setara dengan jumlah tabungan Budi setelah 3 tahun. <br/><br/> Pernyataan di bawah ini yang merupakan fakta adalah ... ",
+      "jawaban": [
+        "Budi menabung Rp 50.000 setiap awal bulan, selama 3 tahun",
+        "Budi mendapatkan deviden saham sejumlah Rp 50.000,-",
+        "Budi dan Teman Budi menabung selama 3 tahun",
+        "Teman Budi menabung setiap awal bulan",
+        "Harga saham Bank X terus meningkat dalam 3 tahun"
+      ],
+      "pembahasan": "Perhatikan subjek dan keterangan yang benar sesuai dengan paragraf."
+    },
+    {
+      "id_soal": 7,
+      "jenis": "Simpulan",
+      "soal": "Setiap awal bulan, Budi menabung sejumlah Rp 50.000,- dalam waktu 3 tahun di Bank X. Kemudian teman Budi, membeli lembar saham Bank X senilai Rp 50.000,- setiap awal bulan selama 3 tahun. Setelah 3 tahun, teman Budi menerima deviden yang diberikan karena kepemilikan saham total sejumlah Rp 50.000,-. Nilai saham yang dimiliki teman Budi setelah 3 tahun setara dengan jumlah tabungan Budi setelah 3 tahun. <br/><br/> Simpulan yang tepat dari paragraf di atas yang benar adalah ...",
+      "jawaban": [
+        "Setelah 3 tahun, jumlah nilai uang dan nilai saham teman Budi lebih banyak dari nilai uang Budi",
+        "Harga saham berfluktuatif, 6 tahun lagi jumlah nilai uang dan nilai saham milik teman Budi akan terus meningkat",
+        "Membeli saham lebih aman daripada menabung",
+        "Menabung lebih aman daripada membeli saham",
+        "Harga saham Bank X terus meningkat dalam 3 tahun"
+      ],
+      "pembahasan": "Perhatikan kesimpulan yang dapat diperoleh dari data-data dalam paragraf secara logis."
+    },
+    {
+      "id_soal": 8,
+      "jenis": "Simpulan ",
+      "soal": "Air sangat berguna bagi kehidupan sehari-hari. Air dapat digunakan untuk mandi, mencuci, memasak, peternakan, pertanian, dan lain sebagainya. Sayangnya tidak semua air dapat digunakan, air yang tercemar limbah akan sangat beresiko jika digunakan untuk memasak. Bisa-bisa keracunan setelah makan makanan yang menggunakan air tercemar limbah dalam proses pembuatanya. Air tercemar limbah juga tidak layak digunakan untuk mandi, kulit bisa iritasi, atau bahkan mucul ruam pada kulit akibat bereaksi dengan cemaran limbah dalam air. Dalam bidang pertanian, penggunaan air irigasi yang tercemar limbah dapat meningkatkan resiko meningkatnya kerusakan tanaman. Karena itu penting untuk tidak mencemari air, seperti tidak membuang limbah deterjen bekas cucian ke aliran irigasi. Menjaga kualitas air dari cemaran limbah, akan memberikan banyak manfaat. <br/><br/> Berikut ini yang bukan merupakan kegunaan air adalah ... ",
+      "jawaban": [
+        "Air cemaran limbah dapat digunakan untuk memasak",
+        "Air dapat digunakan untuk mengalirkan limbah",
+        "Air bekas cucian deterjen dapat digunakan untuk merusak tanaman",
+        "Air dapat digunakan di sektor pertanian, dan peternakan",
+        "Air dapat digunakan untuk mengalirkan limbah"
+      ],
+      "pembahasan": "Dalam paragraf dapat disimpulkan bahwa air dapat digunakan untuk mengalirkan limbah, tapi sebaiknya jangan dilakukan, kerena air cemaran limbah tidak dapat digunakan untuk memasak, mandi, mencuci, pertanian, dan peternakan, karena berpotensi menimbulkan kerusakan."
+    },
+    {
+      "id_soal": 9,
+      "jenis": "Simpulan ",
+      "soal": "Air sangat berguna bagi kehidupan sehari-hari. Air dapat digunakan untuk mandi, mencuci, memasak, peternakan, pertanian, dan lain sebagainya. Sayangnya tidak semua air dapat digunakan, air yang tercemar limbah akan sangat beresiko jika digunakan untuk memasak. Bisa-bisa keracunan setelah makan makanan yang menggunakan air tercemar limbah dalam proses pembuatanya. Air tercemar limbah juga tidak layak digunakan untuk mandi, kulit bisa iritasi, atau bahkan mucul ruam pada kulit akibat bereaksi dengan cemaran limbah dalam air. Dalam bidang pertanian, penggunaan air irigasi yang tercemar limbah dapat meningkatkan resiko meningkatnya kerusakan tanaman. Karena itu penting untuk tidak mencemari air, seperti tidak membuang limbah deterjen bekas cucian ke aliran irigasi. Menjaga kualitas air dari cemaran limbah, akan memberikan banyak manfaat. <br/><br/> Berikut ini pernyataan yang tidak sesuai adalah ... ",
+      "jawaban": [
+        "Kualitas air tercemar, akan memerikan banyak manfaat",
+        "Air yang tidak tercemar dapat digunakan untuk peternakan dan pertanian",
+        "Tidak membuang limbah deterjen bekas cucian air ke saluran irigasi menyelamatkan pertanian",
+        "Limbah deterjen bekas cucian merupakan limbah",
+        "Limbah bisa dialirkan melalui air"
+      ],
+      "pembahasan": "Dalam paragraf tersebut, air tercemar dicitrakan memiliki banyak potensi kerusakan, dan sama sekali tidak ada penjelasan terkait manfaat air cemaran limbah"
+    },
+    {
+      "id_soal": 10,
+      "jenis": "Deret huruf",
+      "soal": "A, Z, D, W, G, ..., ...",
+      "jawaban": [
+        "T, J",
+        "T, J",
+        "K, S",
+        "S, K",
+        "I, U"
+      ],
+      "pembahasan": "Huruf pada indeks ganjil merupakan urutan abjad A-Z, huruf pada indeks genap merupakan urutan abjad Z-A"
+    },
+    {
+      "id_soal": 11,
+      "jenis": "Deret pecahan",
+      "soal": "0.10, 0.10, 0.110, 0.101, ..., ...",
+      "jawaban": [
+        "0.12, 0.102",
+        "0.102, 0.12",
+        "0.111, 0.010",
+        "0.101, 0.001",
+        "0.112, 0.211"
+      ],
+      "pembahasan": "Pecahan pada indeks ganjil ditambahkan 0.01, pecahan pada indeks genap ditambahkan 0.001"
+    },
+    {
+      "id_soal": 12,
+      "jenis": "Matematika",
+      "soal": "&#x221B;9 + &#8730;4 = ...",
+      "jawaban": [
+        "5",
+        "8",
+        "12",
+        "9",
+        "3"
+      ],
+      "pembahasan": "Akar pangkat tiga dari 9 adalah 3, akar pangkat dua atau akar kuadrat dari 4 adalah 2"
+    },
+    {
+      "id_soal": 13,
+      "jenis": "Matematika",
+      "soal": "6<sup>2</sup> + 7<sup>3</sup>= ...",
+      "jawaban": [
+        "379",
+        "973",
+        "739",
+        "937",
+        "397"
+      ],
+      "pembahasan": "6<sup>2</sup> adalah 36, 7<sup>3</sup> adalah 343"
+    },
+    {
+      "id_soal": 14,
+      "jenis": "Aljabar",
+      "soal": "Jika 2 permen ditambah 1 coklat seharga Rp 2.000,-  kemudian 2 coklat dan 2 permen seharga Rp 3.000,- berapa harga 10 coklat dan 300 permen? ",
+      "jawaban": [
+        "Rp 160.000,-",
+        "Rp 110.000,-",
+        "Rp 150.000,-",
+        "Rp 170.000,-",
+        "Rp 115.000,-"
+      ],
+      "pembahasan": "Harga 1 coklat adalah Rp 1.000,- sedangkan harga 1 permen adalah Rp 500,-"
+    },
+    {
+      "id_soal": 15,
+      "jenis": "Matematika",
+      "soal": "Berapa derajat setiap sudut pada sebuah bangun segi 8?",
+      "jawaban": [
+        "45&#176;",
+        "54&#176;",
+        "44&#176;",
+        "55&#176;",
+        "50&#176;"
+      ],
+      "pembahasan": "360&#176; dibagi dengan 8"
+    },
+    {
+      "id_soal": 16,
+      "jenis": "Matematika",
+      "soal": "Jika 2 buah permen harganya lebih mahal dari 2 buah coklat, kemudian 5 coklat harganya lebih mahal dari 1 harga permen, maka kesimpulan yang benar adalah ...",
+      "jawaban": [
+        "Harga permen > harga coklat",
+        "Harga permen < harga coklat",
+        "Harga peremen = harga coklat",
+        "Harga coklat > harga 1 permen",
+        "Harga coklat > harga 2 permen"
+      ],
+      "pembahasan": "360&#176; dibagi dengan 8"
+    },
+    {
+      "id_soal": 17,
+      "jenis": "Matematika",
+      "soal": "Jika x<sup>2</sup>=4 dan y=2, maka ...",
+      "jawaban": [
+        "x = y",
+        "2y = x",
+        "2x= y",
+        "x < y",
+        "y > x"
+      ],
+      "pembahasan": "x adalah &#8730;4"
+    },
+    {
+      "id_soal": 18,
+      "jenis": "Matematika",
+      "soal": "Budi yang seorang atlit e-sport menghabiskan waktu latihan 3 jam sehari mulai pukul 12.00 WIB, sementara itu atlit e-sport lainya bernama Tono menghabiskan waktu latihan 6 jam sehari mulai pukul 13.30 WIB. Suatu ketika dalam pertandingan final, Budi dan Tono bermain sebagai rekan dan kalah. Kenapa Tono kalah?",
+      "jawaban": [
+        "Waktu latihan bersama mereka hanya 1:30 menit, sebagai tim jam terbang mereka kurang",
+        "Waktu latihan Budi lebih sedikit dari waktu latihan Tono",
+        "Tono terlalu lama latihan sehingga mengantuk saat pertandingan melawan Budi ",
+        "Waktu latihan Budi ditambah waktu latihan Tono hanya 9 jam saja, dan berakhir pukul 20.30 WIB",
+        "Dengan jam latihan lebih banyak dari Budi, Tono sengaja menggalah kepada Budi"
+      ],
+      "pembahasan": "Budi dan Tono bermain dalam 1 tim yang sama, namun mereka tidak latihan pada jam yang sama"
+    },
+    {
+      "id_soal": 19,
+      "jenis": "Peluang",
+      "soal": "Budi memiliki 2 buah kantong kresek, setiap kantong berisi 10 kelereng. Setiap kantong berisi 5 kelerang merah dan 5 kelereng biru. Budi hendak mengambil kelereng di kantong kedua, berapakah peluang terambilnya kelereng biru?",
+      "jawaban": [
+        "1/2",
+        "5/20",
+        "5/5",
+        "2/1",
+        "10/5"
+      ],
+      "pembahasan": "Peluang kejadian adalah banyaknya kejadian dibagi dengan ruang sampel (seluruh kejadian)"
+    },
+    {
+      "id_soal": 20,
+      "jenis": "Silogisme",
+      "soal": "Seluruh pengguna <a href='https://cpns.games' target='_blank'>http://cpns.games</a> rajin belajar. Sebagian pengguna <a href='https://cpns.games' target='_blank'>http://cpns.games</a> lulus tes CPNS online.",
+      "jawaban": [
+        "Tidak semua yang rajin belajar lulus tes CPNS online",
+        "Sebagian pengguna <a href='https://cpns.games' target='_blank'>http://cpns.games</a> tidak rajin belajar",
+        "Seluruh peserta tes CPNS online merupakan pengguna <a href='https://cpns.games' target='_blank'>http://cpns.games</a>",
+        "Seluruh pengguna <a href='https://cpns.games' target='_blank'>http://cpns.games</a> mengikuti tes CPNS online",
+        "Sebagian peserta tes CPNS Online tidak belajar"
+      ],
+      "pembahasan": "Premis yang ada dapat digambarkan dalam sebuah diagram himpunan untuk memudahkan, kemudian pilihlah himpunan yang sesuai kenyataan."
+    },
+    {
+      "id_soal": 21,
+      "jenis": "Silogisme",
+      "soal": "Jika hari raya keagamaan jatuh pada hari Jum'at, maka hari Sabtu dijadikan cuti bersama. Hari Sabtu cuti bersama, namun hari Jum'at bukan hari raya keagamaan. <br/><br/> Simpulan yang tepat adalah ...",
+      "jawaban": [
+        "Hari Sabtu cuti bersama bukan karena Jum'at hari raya keagamaan",
+        "Hari Jum'at cuti bersama, namun bukan karena hari raya keagamaan",
+        "Hari Sabtu memang libur untuk pegawai pemerintah",
+        "Hari raya keagamaan jatuh pada hari Minggu",
+        "Cuti bersama sudah ditetapkan pemerintah setahun sebelumnya"
+      ],
+      "pembahasan": "Dalam pilihan jawaban terdapat pilihan yang logis sesuai dengan pengetahuan umum, namun pilihlah yang sesuai dengan konteks pada soal"
+    },
+    {
+      "id_soal": 22,
+      "jenis": "Logika matematika",
+      "soal": "Jika siswa bertambah 10 kali lipat dari sebelumnya, besaran iuran SPP sekolah dapat dikurangi. Jika besaran iuran SPP sekolah berkurang, maka gaji guru bisa bertambah. Ternyata gaji guru bertambah, berarti ...",
+      "jawaban": [
+        "Besaran iuran SPP berkurang",
+        "Jumlah siswa bertambah 2 kali lipat",
+        "Besaran iuran SPP bertambah",
+        "Jumlah siswa berkurang 10 kali lipat",
+        "Jumlah guru berkurang"
+      ],
+      "pembahasan": "Besaran operasional sekolah jika ditanggung orang banyak, maka iuran SPP yang dibayarkan setiap siswa bisa dikurangi. Saat siswa semakin banyak, gaji guru pun seharusnya akan ditambah"
+    },
+    {
+      "id_soal": 23,
+      "jenis": "Logika matematika",
+      "soal": "Jika karyawan mengajukan cuti, maka gajinya tidak akan dipotong. Jika karyawan bolos, maka gajinya akan dipotong. Ternyata Budi tidak mendapatkan gaji, berarti ...",
+      "jawaban": [
+        "Budi bukan karyawan",
+        "Perusahaan curang",
+        "Budi sering cuti, gajinya dipotong hingga tidak tersisa",
+        "Budi tidak bolos, tapi sering cuti",
+        "Budi sering cuti, dan sering bolos"
+      ],
+      "pembahasan": "Jika p sama dengan q, kemudian jika p1 sama dengan q1. Ternyata pada kenyataanya Budi tidak mengalami q dan q1, maka Budi tidak berada pada kondisi p dan p1."
+    },
+    {
+      "id_soal": 24,
+      "jenis": "Analisa",
+      "soal": "Budi lebih tinggi dari Bidu, Bedu lebih pendek dari Bidu. Beni dan Bone tingginya sama, Bone lebih pendek dari Bedu. Maka urutan nama dari yang paling tinggi yang tepat adalah ...",
+      "jawaban": [
+        "Budi, Bidu, Bedu, Beni, Bone",
+        "Budi, Beni, Bidu, Bedu, Bone",
+        "Bedu, Bone, Budi, Bidu, Beni",
+        "Beni, Bone, Bedu, Bidu, Budi",
+        "Budi, Bedu, Bidu, Beni, Bone"
+      ],
+      "pembahasan": "Beni dan Bone memiliki tinggi yang sama, mereka berurutan dan di bawah Bedu . Bedu urutanya di bawah Bidu, dan Budi di atas Bidu"
+    },
+    {
+      "id_soal": 25,
+      "jenis": "Himpunan",
+      "soal": "Siswa kelas 3 dan kelas 2 berkumpul di lapangan. Siswa kelas 3 yang sebagian menyukai matematika berdiri di sisi kiri lapangan, sebagian lagi yang menyukai sejarah berdiri di sisi kanan lapangan. Ada yang tidak menyukai keduanya, mereka berdiri di tengah lapangan. Maka pernyataan yang benar adalah ...",
+      "jawaban": [
+        "Seluruh kelas 2 berdiri di tengah lapangan.",
+        "Sebagian kelas 3, dan seluruh kelas 2 berdiri di tengah lapangan",
+        "Sebagian kelas 3, dan sebagian kelas 2 berdiri di tengah lapangan",
+        "Sebagian kelas 2 berdiri di tengah lapangan",
+        "Seluruh kelas 3 berdiri di tengah lapangan"
+      ],
+      "pembahasan": "Jika digambarkan dengan diagram venn, kelas 2 sama sekali tidak beririsan dengan kelas 3. Kelas 2 tidak ada yang berdiri di sisi kanan atau kiri lapangan."
+    },
+    {
+      "id_soal": 26,
+      "jenis": "Logika",
+      "soal": "Jika membeli pada hari belanja online nasional, maka akan mendapatkan potongan ongkos kirim. Budi membayar penuh ongkos kirim. Maka kesimpulan yang tepat adalah ...",
+      "jawaban": [
+        "Budi tidak membeli pada hari belanjas online nasional",
+        "Budi baik, membayar penuh ongkos kirim sekalipun dapat potongan",
+        "Kurir melakukan kecurangan terhadap Budi",
+        "Kurir membeli tidak pada hari belanja online nasional",
+        "Budi dan kurir adalah orang yang sama"
+      ],
+      "pembahasan": "Jika p=q maka ~p=~q"
+    },
+    {
+      "id_soal": 27,
+      "jenis": "Vigural",
+      "soal": "<svg width='274' height='210' viewBox='0 0 274 210' fill='none' xmlns='http://www.w3.org/2000/svg'> <rect x='0.5' y='0.5' width='99' height='99' fill='white' stroke='black'/> <path d='M50 25L55.6129 42.2746H73.7764L59.0818 52.9508L64.6946 70.2254L50 59.5491L35.3054 70.2254L40.9182 52.9508L26.2236 42.2746H44.3871L50 25Z' fill='black'/> <rect x='174.5' y='0.5' width='99' height='99' fill='white' stroke='black'/> <path d='M261.5 0L264.306 8.63729H273.388L266.041 13.9754L268.847 22.6127L261.5 17.2746L254.153 22.6127L256.959 13.9754L249.612 8.63729H258.694L261.5 0Z' fill='black'/> <path d='M162.061 51.0607C162.646 50.4749 162.646 49.5251 162.061 48.9393L152.515 39.3934C151.929 38.8076 150.979 38.8076 150.393 39.3934C149.808 39.9792 149.808 40.9289 150.393 41.5147L158.879 50L150.393 58.4853C149.808 59.0711 149.808 60.0208 150.393 60.6066C150.979 61.1924 151.929 61.1924 152.515 60.6066L162.061 51.0607ZM114 51.5H161V48.5H114V51.5Z' fill='black'/> <rect x='0.5' y='110.5' width='99' height='99' fill='white' stroke='black'/> <rect x='174.5' y='110.5' width='99' height='99' fill='white' stroke='black'/> <path d='M162.061 161.061C162.646 160.475 162.646 159.525 162.061 158.939L152.515 149.393C151.929 148.808 150.979 148.808 150.393 149.393C149.808 149.979 149.808 150.929 150.393 151.515L158.879 160L150.393 168.485C149.808 169.071 149.808 170.021 150.393 170.607C150.979 171.192 151.929 171.192 152.515 170.607L162.061 161.061ZM114 161.5H161V158.5H114V161.5Z' fill='black'/> <path d='M222.977 162.727V162.659C222.985 161.936 223.061 161.36 223.205 160.932C223.348 160.504 223.553 160.157 223.818 159.892C224.083 159.627 224.402 159.383 224.773 159.159C224.996 159.023 225.197 158.862 225.375 158.676C225.553 158.487 225.693 158.269 225.795 158.023C225.902 157.777 225.955 157.504 225.955 157.205C225.955 156.833 225.867 156.511 225.693 156.239C225.519 155.966 225.286 155.756 224.994 155.608C224.703 155.46 224.379 155.386 224.023 155.386C223.712 155.386 223.413 155.451 223.125 155.58C222.837 155.708 222.597 155.911 222.403 156.188C222.21 156.464 222.098 156.826 222.068 157.273H220.636C220.667 156.629 220.833 156.078 221.136 155.619C221.443 155.161 221.847 154.811 222.347 154.568C222.85 154.326 223.409 154.205 224.023 154.205C224.689 154.205 225.269 154.337 225.761 154.602C226.258 154.867 226.64 155.231 226.909 155.693C227.182 156.155 227.318 156.682 227.318 157.273C227.318 157.689 227.254 158.066 227.125 158.403C227 158.741 226.818 159.042 226.58 159.307C226.345 159.572 226.061 159.807 225.727 160.011C225.394 160.22 225.127 160.439 224.926 160.67C224.725 160.898 224.58 161.169 224.489 161.483C224.398 161.797 224.348 162.189 224.341 162.659V162.727H222.977ZM223.705 166.091C223.424 166.091 223.184 165.991 222.983 165.79C222.782 165.589 222.682 165.348 222.682 165.068C222.682 164.788 222.782 164.547 222.983 164.347C223.184 164.146 223.424 164.045 223.705 164.045C223.985 164.045 224.225 164.146 224.426 164.347C224.627 164.547 224.727 164.788 224.727 165.068C224.727 165.254 224.68 165.424 224.585 165.58C224.494 165.735 224.371 165.86 224.216 165.955C224.064 166.045 223.894 166.091 223.705 166.091Z' fill='black'/> <path d='M50 135L71.6506 172.5H28.3494L50 135Z' fill='black'/> </svg> ",
+      "jawaban": [
+        "<svg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'> <rect x='0.5' y='0.5' width='99' height='99' fill='white' stroke='black'/> <path d='M87.5 0L98.3253 18.75H76.6747L87.5 0Z' fill='black'/> </svg> ",
+        "<svg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'> <rect x='0.5' y='0.5' width='99' height='99' fill='white' stroke='black'/> <path d='M75 0L96.6506 37.5H53.3494L75 0Z' fill='black'/> </svg>",
+        "<svg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'> <rect x='0.5' y='0.5' width='99' height='99' fill='white' stroke='black'/> <path d='M75 12.5L93.75 1.67468V23.3253L75 12.5Z' fill='black'/> </svg> ",
+        "<svg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'> <rect x='0.5' y='0.5' width='99' height='99' fill='white' stroke='black'/> <path d='M48 25L85.5 3.34937V46.6506L48 25Z' fill='black'/> </svg> ",
+        "<svg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'> <rect x='0.5' y='0.5' width='99' height='99' fill='white' stroke='black'/> <path d='M87.5 25L76.6747 6.25L98.3253 6.25L87.5 25Z' fill='black'/> </svg> "
+      ],
+      "pembahasan": "Pilihlah operasi pada gambar dalam pilihan jawaban yang sesuai dengan operasi pada gambar dalam soal"
+    }
+  ]
+}

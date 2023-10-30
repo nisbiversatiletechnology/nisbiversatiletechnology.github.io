@@ -1,0 +1,29 @@
+{
+    "manifest_version": 1,
+    "version": "versipertama",
+    "default_locale":"id",
+    "background_color": "#ffffff",
+    "description": "Latihan Soal Online",
+    "dir": "ltr",
+    "display": "standalone",
+    "name": "Latihan Soal",
+    "orientation": "portrait",
+    "short_name": "Latihan Soal",
+    "start_url": "/index.html",
+    "theme_color": "#ffffff",
+    "categories": [],
+    "icons": [
+      {
+        "src": "/images/images.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "shortcuts": [
+        {
+            "name":"Latihan Soal",
+            "url":"/index.html",
+            "description":"Latihan Soal Online"
+        }
+    ]
+  }

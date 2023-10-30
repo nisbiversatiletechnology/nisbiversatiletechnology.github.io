@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang='id'>
+
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Latihan Soal-soal Online</title>
+  <meta name="description" content="Latihan online menjawab soal-soal secara cepat kurang dari 30 detik">
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet'
+    integrity='sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor' crossorigin='anonymous'>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css'>
+  <link rel="manifest" href="/manifest.json">
+  <style>
+    progress[value] {
+      width: 100%;
+      height: 30px;
+    }
+
+    .container {
+      max-width: 540px;
+    }
+
+    .topmin {
+      position: fixed !important;
+      bottom: -300px !important;
+
+    }
+
+    .menu {
+      float: right;
+      margin: 10px;
+      width: 30%;
+      clear: both;
+    }
+
+    #toast {
+      margin-bottom: 100px !important;
+    }
+
+    .soal {
+      width: 80%;
+    }
+  </style>
+</head>
+
+<body class='bg-light'>
+
+  <div class='container h-100'>
+
+    <header class='sticky-top'>
+      <a href='https://cpnsonline.co.id/?reg=cpns.games' class='text-decoration-none' target='_blank' rel='sponsored'>
+        <div class='mx-auto w-100 mt-3 mb-3 p-3 bg-danger text-white text-center'>
+          <span class='h3'>Gabung Gratis Member CPNS Online</span><br />
+          <span class='h5'>Terbukti luluskan ribuan peserta sejak 2008</span>
+        </div>
+      </a>
+    </header>
+
+    <span class='text-center'>
+      <progress value='30' max='30' id='progressBar'></progress>
+    </span>
+
+    <span id='notifikasi'>
+      <div class='alert alert-info alert-dismissible fade show' role='alert'>
+        <strong><i>Bonus</i>!</strong> Tambahan koin tiap jawab benar kurang dari 30 detik.
+        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+      </div>
+    </span>
+
+
+
+
+    <main>
+      <article>
+
+        <div class='d-flex'>
+          <div class='soal'>
+            <strong>Soal: </strong> <span id='jenisSoal'>...</span>
+            <p id='soal' class='text-break m-3'>...
+
+            </p>
+            <span id='jawaban' class='text-break'>
+              <strong>Pilihan Jawaban : </strong>
+
+              <div class='form-check m-3'>
+                <input class='form-check-input' type='radio' name='flexRadioDefault' value='...' id='flexRadioDefault1'>
+                <label id='jawabanA' class='form-check-label' for='flexRadioDefault1'>
+                  ...
+                </label>
+              </div>
+              <div class='form-check m-3'>
+                <input class='form-check-input' type='radio' name='flexRadioDefault' value='...' id='flexRadioDefault2'>
+                <label id='jawabanB' class='form-check-label' for='flexRadioDefault2'>
+                  ...
+                </label>
+              </div>
+              <div class='form-check m-3'>
+                <input class='form-check-input' type='radio' name='flexRadioDefault' value='...' id='flexRadioDefault3'>
+                <label id='jawabanC' class='form-check-label' for='flexRadioDefault3'>
+                  ...
+                </label>
+              </div>
+              <div class='form-check m-3'>
+                <input class='form-check-input' type='radio' name='flexRadioDefault' value='...' id='flexRadioDefault4'>
+                <label id='jawabanD' class='form-check-label' for='flexRadioDefault4'>
+                  ...
+                </label>
+              </div>
+              <div class='form-check m-3'>
+                <input class='form-check-input' type='radio' name='flexRadioDefault' value='...' id='flexRadioDefault5'>
+                <label id='jawabanE' class='form-check-label' for='flexRadioDefault5'>
+                  ...
+                </label>
+              </div>
+
+
+            </span>
+
+
+            <div id='jawabanSoalDisplay' class='text-break mb-3'>
+              <strong>Jawaban Soal : </strong> <span id='jawabanSoal'> </span>
+            </div>
+
+            <div id='pembahasanSoalDisplay' class='text-break mb-5'>
+              <strong>Pembahasan Soal : </strong> <span id='pembahasanSoal'> </span>
+            </div>
+
+            <div style='height:200px;display:block;visibility: hidden;'></div>
+
+
+          </div>
+
+
+
+
+
+
+          <div class='p-2'>
+            <aside class='position-fixed text-center mb-5'>
+
+              <div class=''><i id='koin' class='h3 bi bi-coin text-primary'></i></div>
+              <label for='koin'><small class='text-primary'><span id='koinJumlah'>50</span> Koin</small></label>
+
+              <a id='shareButton' target='_blank' class='text-decoration-none'
+                href='https://api.whatsapp.com/send?phone=&text=Saya%20dapat%20koin%20gratis%20dari%20https%3A%2F%2Fcpns.games%20untuk%20lihat%20jawaban%20dan%20pembahasan%20latihan%20soal-soal%20CPNS%2C%20seru%20banget!%20Iseng-iseng%20isi%20waktu%20luang%20sambil%20belajar%2C%20konon%201%20soal%20saja%20setiap%20hari%20efeknya%20akan%20berbeda%20dengan%20belajar%20100%20soal%20ngebut%20semalam!'>
+                <div class='mt-3'><i id='bagi' class='h3 bi bi-share text-primary'></i></div>
+                <label for='bagi'><small class='text-primary'>Koin Gratis</small></label>
+              </a>
+
+
+            </aside>
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div id='toast' class='toast m-3 fixed-bottom mx-auto' role='alert' aria-live='assertive' aria-atomic='true'>
+          <div class='toast-header'>
+
+            <strong class='me-auto'>Rouz Zakyyah</strong>
+            <small class='text-muted'>Member CPNS Online</small>
+            <button type='button' class='btn-close' data-bs-dismiss='toast' aria-label='Close'></button>
+          </div>
+          <div class='toast-body'>
+            saya bergabung hampir 1 tahun, ini kali pertama saya ikut tes cpns dan alhamdullah lolos.
+            <div class='mt-2 pt-2 border-top text-end'>
+              <a href='https://cpnsonline.co.id/?reg=cpns.games' class='text-decoration-none' target='_blank'
+                rel='sponsored'><button type='button' class='btn btn-primary btn-sm'>Gabung Gratis!</button></a>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <div class='fixed-bottom mb-3'>
+          <aside class='text-center'>
+            <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
+              <button id='jawabanButton' type='button' class='btn btn-danger'>Jawaban</button>
+              <button id='pembahasanButton' type='button' class='btn btn-warning'>Pembahasan</button>
+              <button id='selanjutnyaButton' type='button' class='btn btn-success'>Selanjutnya</button>
+            </div>
+          </aside>
+
+
+
+
+        </div>
+
+      </article>
+
+
+
+
+    </main>
+
+
+
+
+    <footer>
+
+
+
+    </footer>
+
+
+
+
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js'
+      integrity='sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2'
+      crossorigin='anonymous'></script>
+    <script>
+      let data;
+      let timeleft = 30;
+      const downloadTimer = () => {
+
+
+        setInterval(function () {
+          if (timeleft <= 0) {
+            clearInterval(downloadTimer);
+          }
+          document.getElementById('progressBar').value = timeleft;
+          timeleft -= 1;
+        }, 1000);
+
+      }
+    </script>
+
+
+
+    <script type='module'>
+      import dataku from './data.json' assert {type: 'json'};
+
+      const toastId = document.getElementById('toast');
+      const toast = new bootstrap.Toast(toastId);
+      setTimeout(function () {
+        toast.show();
+      }, 20000);
+
+      const localStorageKey = 'poin';
+      const jawabanButton = document.getElementById('jawabanButton');
+      const pembahasanButton = document.getElementById('pembahasanButton');
+      const selanjutnyaButton = document.getElementById('selanjutnyaButton');
+      const koinJumlah = document.getElementById('koinJumlah');
+      const shareButton = document.getElementById('shareButton');
+      const soal = document.getElementById('soal');
+      const pembahasanSoalDisplay = document.getElementById('pembahasanSoalDisplay');
+      const jawabanSoalDisplay = document.getElementById('jawabanSoalDisplay');
+      const jawabanA = document.getElementById('jawabanA');
+      const jawabanB = document.getElementById('jawabanB');
+      const jawabanC = document.getElementById('jawabanC');
+      const jawabanD = document.getElementById('jawabanD');
+      const jawabanE = document.getElementById('jawabanE');
+      const valueJawabanA = document.getElementById('flexRadioDefault1');
+      const valueJawabanB = document.getElementById('flexRadioDefault2');
+      const valueJawabanC = document.getElementById('flexRadioDefault3');
+      const valueJawabanD = document.getElementById('flexRadioDefault4');
+      const valueJawabanE = document.getElementById('flexRadioDefault5');
+
+      if (typeof (Storage) !== 'undefined') {
+        if (localStorage.getItem(localStorageKey) === null) {
+          localStorage.setItem(localStorageKey, 50);
+        } else {
+          koinJumlah.innerText = localStorage.getItem(localStorageKey);
+        }
+      }
+
+      const updatepoin = (aksi) => {
+        let count = localStorage.getItem(localStorageKey);
+        if (aksi == 'tambah') {
+          count = Number(count) + 10;
+        } else if (aksi == 'kurangi') {
+          count = Number(count) - 10;
+        }
+        localStorage.setItem(localStorageKey, count);
+      }
+
+      const tambah = () => {
+        koinJumlah.innerText = Number(koinJumlah.innerText) + 10;
+        updatepoin('tambah');
+
+      }
+
+      const kurangi = () => {
+        koinJumlah.innerText = Number(koinJumlah.innerText) - 10;
+        updatepoin('kurangi');
+
+      }
+
+      const cekZero = () => {
+        if ((Number(koinJumlah.innerText) - 10) >= 0) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      shareButton.addEventListener('click', () => {
+        setTimeout(function () {
+          tambah();
+          tambah();
+        }, 3000);
+
+      });
+
+      jawabanButton.addEventListener('click', () => {
+        if (cekZero()) {
+          kurangi();
+          jawabanButton.disabled = true;
+          jawabanSoalDisplay.style.display = 'block';
+          timeleft = 0;
+
+        } else {
+          document.getElementById('notifikasi').innerHTML = "<div class='alert alert-warning alert-dismissible fade show' role='alert'> <strong><i>Maaf</i>!</strong> Koin kamu tidak mencukupi! <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
+        }
+      });
+
+      pembahasanButton.addEventListener('click', () => {
+        if (cekZero()) {
+          kurangi();
+          pembahasanButton.disabled = true;
+          pembahasanSoalDisplay.style.display = 'block';
+          timeleft = 0;
+        } else {
+          document.getElementById('notifikasi').innerHTML = "<div class='alert alert-warning alert-dismissible fade show' role='alert'> <strong><i>Maaf</i>!</strong> Koin kamu tidak mencukupi! <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
+        }
+      });
+
+
+
+
+
+      const generatesoal = () => {
+
+        var points = [0, 1, 2, 3, 4];
+
+        for (let i = points.length - 1; i > 0; i--) {
+          let j = Math.floor(Math.random() * i)
+          let k = points[i]
+          points[i] = points[j]
+          points[j] = k
+        }
+
+
+        
+ data = dataku.data;
+
+        let bankSoal = data[Math.floor(Math.random() * data.length)];
+        soal.innerText = bankSoal.soal;
+        jenisSoal.innerText = bankSoal.jenis;
+        jawabanA.innerText = bankSoal.jawaban[points[0]];
+        jawabanB.innerText = bankSoal.jawaban[points[1]];
+        jawabanC.innerText = bankSoal.jawaban[points[2]];
+        jawabanD.innerText = bankSoal.jawaban[points[3]];
+        jawabanE.innerText = bankSoal.jawaban[points[4]];
+
+        valueJawabanA.setAttribute('value', bankSoal.jawaban[points[0]]);
+        valueJawabanB.setAttribute('value', bankSoal.jawaban[points[1]]);
+        valueJawabanC.setAttribute('value', bankSoal.jawaban[points[2]]);
+        valueJawabanD.setAttribute('value', bankSoal.jawaban[points[3]]);
+        valueJawabanE.setAttribute('value', bankSoal.jawaban[points[4]]);
+
+
+        jawabanSoal.innerText = bankSoal.jawaban[0];
+        pembahasanSoal.innerText = bankSoal.pembahasan;
+        jawabanSoalDisplay.style.display = 'none';
+        pembahasanSoalDisplay.style.display = 'none';
+        selanjutnyaButton.disabled = true;
+        timeleft = 30;
+
+      }
+
+
+
+
+      kurangi();
+      generatesoal();
+      downloadTimer();
+
+
+
+      document.getElementById('jawaban').addEventListener('click', () => {
+        selanjutnyaButton.disabled = false;
+
+      });
+
+      selanjutnyaButton.addEventListener('click', () => {
+        jawabanButton.disabled = false;
+        pembahasanButton.disabled = false;
+        selanjutnyaButton.disabled = true;
+
+
+        if (document.querySelector('input[name="flexRadioDefault"]:checked').value != jawabanSoal.innerText) {
+
+          kurangi();
+
+
+          document.getElementById('notifikasi').innerHTML = "<div class='alert alert-danger alert-dismissible fade show' role='alert'> <strong><i>Salah</i>!</strong> Jawaban belum tepat, koin kamu berkurang! <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
+
+        } else if (document.querySelector('input[name="flexRadioDefault"]:checked').value == jawabanSoal.innerText) {
+
+          if (timeleft >= 0) {
+            tambah();
+            document.getElementById('notifikasi').innerHTML = "<div class='alert alert-info alert-dismissible fade show' role='alert'> <strong><i>Benar</i>!</strong> Kamu dapat tambahan 10 koin. <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
+            document.querySelector('input[name="flexRadioDefault"]:checked').checked = false;
+            timeleft = 30;
+            generatesoal();
+          } else {
+            document.getElementById('notifikasi').innerHTML = "<div class='alert alert-warning alert-dismissible fade show' role='alert'> <strong><i>Benar</i>!</strong> Sayangnya tidak dapat koin, waktu berlebih <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
+            document.querySelector('input[name="flexRadioDefault"]:checked').checked = false;
+            generatesoal();
+
+
+          };
+        }
+
+
+      });
+
+
+
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then(function () {
+              console.log("Pendaftaran ServiceWorker berhasil");
+            })
+            .catch(function () {
+              console.log("Pendaftaran ServiceWorker gagal");
+            });
+        });
+      } else {
+        console.log("ServiceWorker belum didukung browser ini.");
+      }
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
