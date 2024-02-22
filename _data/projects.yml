@@ -1,9 +1,9 @@
 - title: Klasifikasi Suara Paru-paru Penderita Covid-19
   description: Reka cipta ini dapat menganalisa suara paru-paru yang dicek melalui stetoskop digital untuk menentukan fase Covid-19
   url: /covidsound/
-- title: Informasi Pencerahan Bias Media
-  description: Reka cipta ini dapat memberikan informasi pencerahan terhadap berita yang terindikasi sebagai bias
-  url: /biasobserver/
+- title: AI Hoax Buster
+  description: Reka cipta ini dapat memberikan informasi pencerahan terhadap berita yang terindikasi sebagai hoax
+  url: https://hoaxbuster.ai
 - title: Pemantau Berita Terindikasi Objektifikasi Perempuan 
   description: Reka cipta ini dapat memantau pemberitaan-pemberitaan media yang terindikasi melakukan praktik objektifikasi terhadap perempuan dalam pemberitaanya
   url: /objektifikasiperempuan/
