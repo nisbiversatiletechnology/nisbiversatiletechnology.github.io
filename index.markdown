@@ -31,6 +31,10 @@ comments: true
 
 </style>
 
+<script async src="https://cse.google.com/cse.js?cx=d02232531dd03410f">
+</script>
+<div class="gcse-search"></div>
+
 <h2 class="post-list-heading">Reka Cipta Unggulan</h2>
 
 {% for project in site.data.projects %}
