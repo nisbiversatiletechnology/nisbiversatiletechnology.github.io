@@ -21,7 +21,7 @@
 title: PT Nisbi Versatile Technology
 email: email@nisbi.co.id
 description: >- # this means to ignore newlines until "baseurl:"
-  JL. Sumbersekar 1 Semanding No. 1 RT. 001 RW. Sumbersekar Dau Kab. Malang Jawa Timur.
+  JL. Sumbersekar 1 Semanding No. 1 RT. 001 RW. 001 Sumbersekar Dau Kab. Malang Jawa Timur.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nisbi.co.id" # the base hostname & protocol for your site, e.g. http://example.com
 
